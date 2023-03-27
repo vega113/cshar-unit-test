@@ -8,6 +8,13 @@
 - Don't depend on external services
 - Allow reproducible results
 
+## Arranging your tests
+Arrange, Act, Assert is a common pattern when unit testing. As the name implies, it consists of three main actions:
+- Arrange your objects, create and set them up as necessary. [Example](examples/test_arrangement.md)
+- Act on an object.
+- Assert that something is as expected.
+  Readability is one of the most important aspects when writing a test. Separating each of these actions within the test clearly highlight the dependencies required to call your code, how your code is being called, and what you're trying to assert. While it might be possible to combine some steps and reduce the size of your test, the primary goal is to make the test as readable as possible.
+
 ## Protection against regression
 
 - Provides confidence that your new code doesn't break existing functionality [Example](examples/regression_example.md)
@@ -57,7 +64,7 @@
   - Following [The Dependency Inversion Principle](https://deviq.com/principles/dependency-inversion-principle) (i.e. high level modules should not depend on low level modules, but both should depend on abstractions)
 
 ## Test Naming
-- The name of the method being tested
+- The name of the method being tested [Example](examples/test_naming.md)
 - The scenario under which it's being tested
 - The expected behavior when the scenario is invoked
 
