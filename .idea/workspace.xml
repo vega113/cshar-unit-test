@@ -62,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679580580091</updated>
-      <workItem from="1679580581849" duration="25000000" />
+      <workItem from="1679580581849" duration="25112000" />
     </task>
     <task id="LOCAL-00001" summary="Initial presentation version">
       <created>1679841190299</created>
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679917495916</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Extends example for internal unit testing">
+      <created>1679917574417</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679917574417</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

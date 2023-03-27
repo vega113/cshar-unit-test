@@ -69,6 +69,6 @@ namespace YourCompany.Shapes.UnitTest
 }
 ```
 
-In this example, we've created a unit test for the `CalculateArea` method. Although `CalculateArea` is an internal method, we're able to access it in the test project because we've specified the `InternalsVisibleTo` attribute in the `AssemblyInfo.cs` file of the project containing the `Rectangle` class.
+In this example, we've created a unit test for the `CalculateArea` method. Although `CalculateArea` is an internal method, we're able to access it in the test project because we've specified the `InternalsVisibleTo` attribute containing the `Rectangle` class.
 
 Now you can run your test just as you would for any other test. This approach allows you to test internal methods without making them public, ensuring that you can still maintain proper encapsulation while verifying the correctness of your code.
