@@ -3,17 +3,15 @@ To unit test internal methods in C#, you can use the InternalsVisibleTo attribut
 
 Here's a step-by-step guide on how to do this:
 
-In your project, create a file named AssemblyInfo.cs if it doesn't exist. This file is usually located in the Properties folder for .NET Framework projects, and in the root folder for .NET Core and .NET 5+ projects.
-
-Open the `AssemblyInfo.cs` file and add the following line:
-
-```csharp
-using System.Runtime.CompilerServices;
-
-[assembly: InternalsVisibleTo("YourTestProjectName")]
+Add the following attribute to the class you want to test:
 ```
+[assembly: InternalsVisibleTo("YourCompany.Shapes.UnitTest")]
+```
+Examples in the Core project:
+- [AdyenApiTest](https://bitbucket.org/globaleteam/core/src/develop/Testing/Old/UnitTestProject1/ExternalAPIs/Payments/Gateways/AdyenApiTest.cs)
+- [AdyenApi](https://bitbucket.org/globaleteam/core/src/develop/GlobalE.ExternalAPIs.Secured/Payments/Gateways/AdyenAPI.cs)
 
-Replace YourTestProjectName with the name of your test project.
+Replace `YourCompany.Shapes.UnitTest` with the namespace of your unit test project.
 
 In your test project, add a reference to the project containing the internal methods you want to test.
 
@@ -23,43 +21,50 @@ Here's an example:
 
 Suppose you have an internal method `CalculateArea` in a class Rectangle:
 ```csharp
-public class Rectangle
+[assembly: InternalsVisibleTo("YourCompany.Shapes.UnitTest")]
+namespace YourCompany.Shapes
 {
-    public int Length { get; set; }
-    public int Width { get; set; }
-
-    internal int CalculateArea()
+    public class Rectangle
     {
-        return Length * Width;
+        public int Length { get; set; }
+        public int Width { get; set; }
+    
+        internal int CalculateArea()
+        {
+            return Length * Width;
+        }
     }
 }
 ```
 
 In your test project, create a test class RectangleTests and write a test for the `CalculateArea` method:
 ```csharp
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using YourProjectNamespace;
-
-[TestClass]
-public class RectangleTests
+namespace YourCompany.Shapes.UnitTest
 {
-    [TestMethod]
-    public void CalculateArea_ShouldReturnCorrectArea_WhenCalled()
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using YourProjectNamespace;
+    
+    [TestClass]
+    public class RectangleTests
     {
-        // Arrange
-        var rectangle = new Rectangle
+        [TestMethod]
+        public void CalculateArea_ShouldReturnCorrectArea_WhenCalled()
         {
-            Length = 4,
-            Width = 5
-        };
-
-        int expectedArea = 20;
-
-        // Act
-        int result = rectangle.CalculateArea();
-
-        // Assert
-        Assert.AreEqual(expectedArea, result);
+            // Arrange
+            var rectangle = new Rectangle
+            {
+                Length = 4,
+                Width = 5
+            };
+    
+            int expectedArea = 20;
+    
+            // Act
+            int result = rectangle.CalculateArea();
+    
+            // Assert
+            Assert.AreEqual(expectedArea, result);
+        }
     }
 }
 ```
