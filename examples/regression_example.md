@@ -17,7 +17,7 @@ public class Calculator
     }
 }
 ```
-Now, we create a unit test for the Add and Multiply methods using a testing framework like Xunit:
+Now, we create a unit test for the Add and Multiply methods:
 
 ```
 using Microsoft.VisualStudio.TestTools.UnitTesting;

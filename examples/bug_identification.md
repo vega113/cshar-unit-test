@@ -14,7 +14,7 @@ public class StringUtilities
 }
 ```
 
-Now, we create a unit test for the Reverse method using a testing framework like Xunit:
+Now, we create a unit test for the Reverse method:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;

@@ -1,4 +1,4 @@
-Writing unit tests can help reveal tightly coupled code, making it more apparent and encouraging developers to refactor their code for better maintainability and testability. Let's consider a simple example in C# using XUnit:
+Writing unit tests can help reveal tightly coupled code, making it more apparent and encouraging developers to refactor their code for better maintainability and testability. Let's consider a simple example in C#:
 
 Suppose we have a UserService class with a SaveUser method that directly interacts with a database, resulting in tight coupling:
 
@@ -58,7 +58,7 @@ public class UserService
 }
 ```
 
-Now, we can create a unit test for the `SaveUser` method using XUnit and a mock implementation of the `IUserRepository` interface:
+Now, we can create a unit test for the `SaveUser` method using a mock implementation of the `IUserRepository` interface:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;

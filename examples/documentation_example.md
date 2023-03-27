@@ -17,7 +17,7 @@ public class TemperatureConverter
 }
 ```
 
-Now, we create unit tests for the CelsiusToFahrenheit and FahrenheitToCelsius methods using a testing framework like Xunit:
+Now, we create unit tests for the CelsiusToFahrenheit and FahrenheitToCelsius methods:
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourProjectNamespace;

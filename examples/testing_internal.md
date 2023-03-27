@@ -1,5 +1,5 @@
 # Testing Internals
-To unit test internal methods in C# using XUnit, you can use the InternalsVisibleTo attribute in your project's AssemblyInfo.cs file (or create one if it doesn't exist). This attribute allows you to expose internal members of an assembly to another assembly, which makes it possible to test internal methods.
+To unit test internal methods in C#, you can use the InternalsVisibleTo attribute in your project's AssemblyInfo.cs file (or create one if it doesn't exist). This attribute allows you to expose internal members of an assembly to another assembly, which makes it possible to test internal methods.
 
 Here's a step-by-step guide on how to do this:
 
@@ -17,7 +17,7 @@ Replace YourTestProjectName with the name of your test project.
 
 In your test project, add a reference to the project containing the internal methods you want to test.
 
-Now you can write unit tests for your internal methods using XUnit, just as you would for public methods.
+Now you can write unit tests for your internal methods, just as you would for public methods.
 
 Here's an example:
 
@@ -64,6 +64,6 @@ public class RectangleTests
 }
 ```
 
-In this example, we've created a unit test for the `CalculateArea` method using XUnit. Although `CalculateArea` is an internal method, we're able to access it in the test project because we've specified the `InternalsVisibleTo` attribute in the `AssemblyInfo.cs` file of the project containing the `Rectangle` class.
+In this example, we've created a unit test for the `CalculateArea` method. Although `CalculateArea` is an internal method, we're able to access it in the test project because we've specified the `InternalsVisibleTo` attribute in the `AssemblyInfo.cs` file of the project containing the `Rectangle` class.
 
-Now you can run your test just as you would for any other test using XUnit. This approach allows you to test internal methods without making them public, ensuring that you can still maintain proper encapsulation while verifying the correctness of your code.
+Now you can run your test just as you would for any other test. This approach allows you to test internal methods without making them public, ensuring that you can still maintain proper encapsulation while verifying the correctness of your code.
