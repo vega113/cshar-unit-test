@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49ea8732-4429-4637-bb7e-52818132f7c1" name="Changes" comment="Extends example for internal unit testing">
-      <change beforePath="$PROJECT_DIR$/examples/testing_internal.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/testing_internal.md" afterDir="false" />
+    <list default="true" id="49ea8732-4429-4637-bb7e-52818132f7c1" name="Changes" comment="Adds csharp to code examples">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679580580091</updated>
-      <workItem from="1679580581849" duration="25112000" />
+      <workItem from="1679580581849" duration="26477000" />
     </task>
     <task id="LOCAL-00001" summary="Initial presentation version">
       <created>1679841190299</created>
@@ -120,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679917574417</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Extends example for internal unit testing">
+      <created>1679917692263</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679917692263</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adds csharp to code examples">
+      <created>1679918409449</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679918409449</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +150,8 @@
     <MESSAGE value="Adds test arrangement" />
     <MESSAGE value="Removes XUnit references." />
     <MESSAGE value="Extends example for internal unit testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extends example for internal unit testing" />
+    <MESSAGE value="Adds csharp to code examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds csharp to code examples" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

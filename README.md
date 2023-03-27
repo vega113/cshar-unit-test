@@ -1,7 +1,5 @@
 # Why unit test?
 
-#### Based on [Unit testing best practices with .NET Core and .NET Standard](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
-
 ## Less time performing functional tests
 
 - Unit tests, on the other hand, take milliseconds
@@ -78,3 +76,5 @@ Arrange, Act, Assert is a common pattern when unit testing. As the name implies,
 
 ## Avoid using static calls/references in the code
 - For example, if we need to use `DateTime.Now`, instead of directly calling it in the code, create an instance of IDateTimeProvider.
+
+#### Based on [Unit testing best practices with .NET Core and .NET Standard](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
