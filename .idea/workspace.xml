@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49ea8732-4429-4637-bb7e-52818132f7c1" name="Changes" comment="Commits again">
+    <list default="true" id="49ea8732-4429-4637-bb7e-52818132f7c1" name="Changes" comment="Fixes hyperlinks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharp unit testing.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/bug_identification.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/bug_identification.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/documentation_example.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/documentation_example.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/regression_example.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/regression_example.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/tightly_coupled.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/tightly_coupled.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/testing_internal.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/testing_internal.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679580580091</updated>
-      <workItem from="1679580581849" duration="21074000" />
+      <workItem from="1679580581849" duration="21838000" />
     </task>
     <task id="LOCAL-00001" summary="Initial presentation version">
       <created>1679841190299</created>
@@ -83,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679913143256</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixes hyperlinks">
+      <created>1679913652367</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679913652367</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,7 +100,8 @@
     <MESSAGE value="Initial presentation version" />
     <MESSAGE value="Renames to README.md" />
     <MESSAGE value="Commits again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commits again" />
+    <MESSAGE value="Fixes hyperlinks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes hyperlinks" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

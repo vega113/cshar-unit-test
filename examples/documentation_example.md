@@ -1,3 +1,4 @@
+# Executable Documentation
 Unit tests can serve as a form of documentation by demonstrating how to use the code and outlining its expected behavior. By reading the test cases, developers can gain a better understanding of the code's functionality without needing extensive comments or documentation. Here's a C# example that demonstrates this:
 
 Let's say we have a simple `TemperatureConverter` class:

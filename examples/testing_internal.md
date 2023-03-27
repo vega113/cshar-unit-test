@@ -1,3 +1,4 @@
+# Testing Internals
 To unit test internal methods in C# using XUnit, you can use the InternalsVisibleTo attribute in your project's AssemblyInfo.cs file (or create one if it doesn't exist). This attribute allows you to expose internal members of an assembly to another assembly, which makes it possible to test internal methods.
 
 Here's a step-by-step guide on how to do this:
@@ -36,28 +37,30 @@ public class Rectangle
 
 In your test project, create a test class RectangleTests and write a test for the `CalculateArea` method:
 ```csharp
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourProjectNamespace;
 
+[TestClass]
 public class RectangleTests
 {
-    [Fact]
-    public void CalculateArea_WhenCalled_ShouldReturnCorrectArea()
+    [TestMethod]
+    public void CalculateArea_ShouldReturnCorrectArea_WhenCalled()
     {
-    // Arrange
-    var rectangle = new Rectangle
-    {
-        Length = 4,
-        Width = 5
-    };
+        // Arrange
+        var rectangle = new Rectangle
+        {
+            Length = 4,
+            Width = 5
+        };
 
-    int expectedArea = 20;
+        int expectedArea = 20;
 
-    // Act
-    int result = rectangle.CalculateArea();
+        // Act
+        int result = rectangle.CalculateArea();
 
-    // Assert
-    Assert.Equal(expectedArea, result);
+        // Assert
+        Assert.AreEqual(expectedArea, result);
+    }
 }
 ```
 

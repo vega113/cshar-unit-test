@@ -66,7 +66,7 @@
 - At some point, there's going to be a public facing method that calls the private method as part of its implementation.
 - What you should care about is the end result of the public method that calls into the private one.
 
-## Testing internal methods in case it is hard to test the public method [Example](examples/testing_internal.md)
+## Testing internal methods in case it is hard to test the public method
 - In some cases we have tightly coupled legacy code in public method which makes it hard to unit test it directly. In these cases we might want to unit test `internal` methods separately. [Example](examples/testing_internal.md)
 
 ## Avoid using static calls/references in the code

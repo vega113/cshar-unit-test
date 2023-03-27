@@ -1,3 +1,4 @@
+# Regression
 Unit testing provides confidence that your new code doesn't break existing functionality because it ensures that each unit of code works as expected, even after changes or additions have been made. Here's a C# example that demonstrates this:
 
 Let's say we have a simple `Calculator` class:
