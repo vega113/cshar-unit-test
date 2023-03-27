@@ -1,98 +1,95 @@
 # Regression
-Unit testing provides confidence that your new code doesn't break existing functionality because it ensures that each unit of code works as expected, even after changes or additions have been made. Here's a C# example that demonstrates this:
-
-Let's say we have a simple `Calculator` class:
-
+Let's consider an example of a simple StringOperations class that has a Concatenate method that concatenates two strings. We'll create a unit test for this method, and then modify the functionality while relying on the test to verify that the code still works.
+- Initial StringOperations class:
 ```csharp
-public class Calculator
+public class StringOperations
 {
-    public int Add(int a, int b)
+    public string Concatenate(string a, string b)
     {
         return a + b;
     }
-
-    public int Multiply(int a, int b)
-    {
-        return a * b;
-    }
 }
 ```
-Now, we create a unit test for the Add and Multiply methods:
+- MSTest unit test for the Concatenate method:
+```csharp
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using YourProjectNamespace;
+
+[TestClass]
+public class StringOperationsTests
+{
+    [TestMethod]
+    public void Concatenate_ShouldReturnConcatenatedStrings_WhenGivenTwoStrings()
+    {
+        // Arrange
+        var stringOperations = new StringOperations();
+        string a = "Hello";
+        string b = "World";
+        string expectedResult = "HelloWorld";
+
+        // Act
+        string result = stringOperations.Concatenate(a, b);
+
+        // Assert
+        Assert.AreEqual(expectedResult, result);
+    }
+} 
+```
+
+- Now, we want to modify the Concatenate method to allow an optional separator between the two strings.
+```csharp
+public class StringOperations
+{
+    public string Concatenate(string a, string b, string separator = "")
+    {
+        return a + separator + b;
+    }
+} 
+```
+
+- Update the existing test and add a new test to cover the new functionality:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourProjectNamespace;
 
 [TestClass]
-public class CalculatorTests
+public class StringOperationsTests
 {
     [TestMethod]
-    public void Add_ShouldReturnCorrectSum_WhenGivenTwoIntegers()
+    public void Concatenate_ShouldReturnConcatenatedStrings_WhenGivenTwoStringsAndNoSeparator()
     {
-        // Arrange
-        var calculator = new Calculator();
-        int a = 3, b = 5;
+    // Arrange
+    var stringOperations = new StringOperations();
+    string a = "Hello";
+    string b = "World";
+    string expectedResult = "HelloWorld";
+    // Act
+    string result = stringOperations.Concatenate(a, b);
 
-        // Act
-        int result = calculator.Add(a, b);
-
-        // Assert
-        Assert.AreEqual(8, result);
+    // Assert
+    Assert.AreEqual(expectedResult, result);
     }
 
     [TestMethod]
-    public void Multiply_ShouldReturnCorrectProduct_WhenGivenTwoIntegers()
+    public void Concatenate_ShouldReturnConcatenatedStringsWithSeparator_WhenGivenTwoStringsAndSeparator()
     {
         // Arrange
-        var calculator = new Calculator();
-        int a = 4, b = 7;
-
+        var stringOperations = new StringOperations();
+        string a = "Hello";
+        string b = "World";
+        string separator = "-";
+        string expectedResult = "Hello-World";
+    
         // Act
-        int result = calculator.Multiply(a, b);
-
+        string result = stringOperations.Concatenate(a, b, separator);
+    
         // Assert
-        Assert.AreEqual(28, result);
+        Assert.AreEqual(expectedResult, result);
     }
 }
 ```
-
-Later, we decide to add a new method Subtract to the Calculator class:
-
-```csharp
-public class Calculator
-{
-// ... existing methods ...
-
-    public int Subtract(int a, int b)
-    {
-        return a - b;
-    }
-}
-```
-
-Even though we added new functionality, our existing unit tests for the Add and Multiply methods give us confidence that we haven't broken any existing functionality. We can also create a new unit test for the Subtract method to ensure it works as intended:
-
-```csharp
-[TestClass]
-public class CalculatorTests
-{
-    // ... other test methods ...
-
-    [TestMethod]
-    public void Subtract_ShouldReturnCorrectDifference_WhenGivenTwoIntegers()
-    {
-        // Arrange
-        var calculator = new Calculator();
-        int a = 9, b = 4;
-
-        // Act
-        int result = calculator.Subtract(a, b);
-
-        // Assert
-        Assert.AreEqual(5, result);
-    }
-}
-```
+Now, after modifying the `Concatenate` method to support an optional separator, we have updated the existing test to cover the case when no separator is provided and added a new test to cover the case when a separator is provided. These tests will help us ensure that our changes haven't broken existing functionality and the new feature works as expected.
 
 By maintaining a comprehensive suite of unit tests, we can catch regressions, ensure the correctness of our codebase, and minimize the risk of introducing bugs when adding or modifying features. As we continue to develop our application, it's crucial to keep the following best practices in mind:
 
