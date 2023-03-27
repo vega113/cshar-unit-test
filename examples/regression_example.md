@@ -19,7 +19,7 @@ public class Calculator
 ```
 Now, we create a unit test for the Add and Multiply methods:
 
-```
+```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourProjectNamespace;
 
@@ -58,7 +58,7 @@ public class CalculatorTests
 
 Later, we decide to add a new method Subtract to the Calculator class:
 
-```
+```csharp
 public class Calculator
 {
 // ... existing methods ...
@@ -72,7 +72,7 @@ public class Calculator
 
 Even though we added new functionality, our existing unit tests for the Add and Multiply methods give us confidence that we haven't broken any existing functionality. We can also create a new unit test for the Subtract method to ensure it works as intended:
 
-```
+```csharp
 [TestClass]
 public class CalculatorTests
 {
