@@ -19,27 +19,28 @@ public class Calculator
 Now, we create a unit test for the Add and Multiply methods using a testing framework like Xunit:
 
 ```
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourProjectNamespace;
 
+[TestClass]
 public class CalculatorTests
 {
-[Fact]
-public void Add_ShouldReturnCorrectSum()
-{
-// Arrange
-var calculator = new Calculator();
-int a = 3, b = 5;
+    [TestMethod]
+    public void Add_ShouldReturnCorrectSum_WhenGivenTwoIntegers()
+    {
+        // Arrange
+        var calculator = new Calculator();
+        int a = 3, b = 5;
 
         // Act
         int result = calculator.Add(a, b);
 
         // Assert
-        Assert.Equal(8, result);
+        Assert.AreEqual(8, result);
     }
 
-    [Fact]
-    public void Multiply_ShouldReturnCorrectProduct()
+    [TestMethod]
+    public void Multiply_ShouldReturnCorrectProduct_WhenGivenTwoIntegers()
     {
         // Arrange
         var calculator = new Calculator();
@@ -49,7 +50,7 @@ int a = 3, b = 5;
         int result = calculator.Multiply(a, b);
 
         // Assert
-        Assert.Equal(28, result);
+        Assert.AreEqual(28, result);
     }
 }
 ```
@@ -71,18 +72,24 @@ public class Calculator
 Even though we added new functionality, our existing unit tests for the Add and Multiply methods give us confidence that we haven't broken any existing functionality. We can also create a new unit test for the Subtract method to ensure it works as intended:
 
 ```
-[Fact]
-public void Subtract_ShouldReturnCorrectDifference()
+[TestClass]
+public class CalculatorTests
 {
-    // Arrange
-    var calculator = new Calculator();
-    int a = 9, b = 4;
+    // ... other test methods ...
 
-    // Act
-    int result = calculator.Subtract(a, b);
+    [TestMethod]
+    public void Subtract_ShouldReturnCorrectDifference_WhenGivenTwoIntegers()
+    {
+        // Arrange
+        var calculator = new Calculator();
+        int a = 9, b = 4;
 
-    // Assert
-    Assert.Equal(5, result);
+        // Act
+        int result = calculator.Subtract(a, b);
+
+        // Assert
+        Assert.AreEqual(5, result);
+    }
 }
 ```
 

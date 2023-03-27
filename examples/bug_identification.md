@@ -16,16 +16,17 @@ public class StringUtilities
 Now, we create a unit test for the Reverse method using a testing framework like Xunit:
 
 ```csharp
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourProjectNamespace;
 
+[TestClass]
 public class StringUtilitiesTests
 {
-    [Theory]
-    [InlineData("hello", "olleh")]
-    [InlineData("world", "dlrow")]
-    [InlineData("abcde", "edcba")]
-    public void Reverse_ShouldReturnReversedString(string input, string expected)
+    [TestMethod]
+    [DataRow("hello", "olleh")]
+    [DataRow("world", "dlrow")]
+    [DataRow("abcde", "edcba")]
+    public void Reverse_InputString_ReturnsReversedString(string input, string expected)
     {
         // Arrange
         var stringUtilities = new StringUtilities();
@@ -34,7 +35,7 @@ public class StringUtilitiesTests
         string result = stringUtilities.Reverse(input);
 
         // Assert
-        Assert.Equal(expected, result);
+        Assert.AreEqual(expected, result);
     }
 }
 ```
@@ -59,15 +60,16 @@ public class StringUtilities
 ```
 Now, we need to update our existing unit tests and add new tests to ensure that our updated Reverse method works correctly:
 ```csharp
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourProjectNamespace;
 
+[TestClass]
 public class StringUtilitiesTests
 {
-    [Theory]
-    [InlineData("hello", "olleh")]
-    [InlineData("world", "dlrow")]
-    [InlineData("abcde", "edcba")]
+    [TestMethod]
+    [DataRow("hello", "olleh")]
+    [DataRow("world", "dlrow")]
+    [DataRow("abcde", "edcba")]
     public void Reverse_ShouldReturnReversedString_WhenGivenSingleWord(string input, string expected)
     {
         // Arrange
@@ -77,14 +79,16 @@ public class StringUtilitiesTests
         string result = stringUtilities.Reverse(input);
 
         // Assert
-        Assert.Equal(expected, result);
+        Assert.AreEqual(expected, result);
     }
+ }   
 ```
 
 ```csharp
-[InlineData("hello world", "olleh dlrow")]
-[InlineData("The quick brown fox", "ehT kciuq nworb xof")]
-[InlineData("I love C#", "I evol #C")]
+[TestMethod]
+[DataRow("hello world", "olleh dlrow")]
+[DataRow("The quick brown fox", "ehT kciuq nworb xof")]
+[DataRow("I love C#", "I evol #C")]
 public void Reverse_ShouldReturnReversedWords_WhenGivenSentence(string input, string expected)
 {
     // Arrange
@@ -94,7 +98,7 @@ public void Reverse_ShouldReturnReversedWords_WhenGivenSentence(string input, st
     string result = stringUtilities.Reverse(input);
 
     // Assert
-    Assert.Equal(expected, result);
+    Assert.AreEqual(expected, result);
 }
 ```
 The updated unit tests now cover both the original functionality (reversing single words) and the new functionality (reversing words in a sentence). Running these tests ensures that our code works as intended, and any bugs or issues that arise during development can be caught early, making them easier to fix.

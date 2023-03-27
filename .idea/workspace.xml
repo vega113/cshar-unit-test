@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49ea8732-4429-4637-bb7e-52818132f7c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/markdown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cshar-unit-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csharp unit testing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/bug_identification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/documentation_example.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/regression_example.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/tightly_coupled.md" afterDir="false" />
+    <list default="true" id="49ea8732-4429-4637-bb7e-52818132f7c1" name="Changes" comment="Commits again">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csharp unit testing.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/bug_identification.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/bug_identification.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/documentation_example.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/documentation_example.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/regression_example.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/regression_example.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/tightly_coupled.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/tightly_coupled.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d7a5d217-7c06-4b95-9cb6-84e3d0537335" />
+        <option name="url" value="https://github.com/vega113/cshar-unit-test.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,6 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,12 +67,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679580580091</updated>
-      <workItem from="1679580581849" duration="14547000" />
+      <workItem from="1679580581849" duration="21074000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial presentation version">
+      <created>1679841190299</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679841190299</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Renames to README.md">
+      <created>1679913143256</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679913143256</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial presentation version" />
+    <MESSAGE value="Renames to README.md" />
+    <MESSAGE value="Commits again" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commits again" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

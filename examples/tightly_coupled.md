@@ -61,14 +61,15 @@ public class UserService
 Now, we can create a unit test for the `SaveUser` method using XUnit and a mock implementation of the `IUserRepository` interface:
 
 ```csharp
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using YourProjectNamespace;
 
+[TestClass]
 public class UserServiceTests
 {
-    [Fact]
-    public void SaveUser_WhenCalled_ShouldCallSaveUserInRepository()
+    [TestMethod]
+    public void SaveUser_WhenCalled_ShouldCallSaveUserInRepository_WhenGivenUserName()
     {
         // Arrange
         var userRepositoryMock = new Mock<IUserRepository>();

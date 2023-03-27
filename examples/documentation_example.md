@@ -18,16 +18,17 @@ public class TemperatureConverter
 
 Now, we create unit tests for the CelsiusToFahrenheit and FahrenheitToCelsius methods using a testing framework like Xunit:
 ```csharp
-using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YourProjectNamespace;
 
+[TestClass]
 public class TemperatureConverterTests
 {
-    [Theory]
-    [InlineData(0, 32)]
-    [InlineData(100, 212)]
-    [InlineData(-40, -40)]
-    public void CelsiusToFahrenheit_ShouldReturnCorrectTemperature(double celsius, double expectedFahrenheit)
+    [TestMethod]
+    [DataRow(0, 32)]
+    [DataRow(100, 212)]
+    [DataRow(-40, -40)]
+    public void CelsiusToFahrenheit_ShouldReturnCorrectTemperature_WhenGivenCelsius(double celsius, double expectedFahrenheit)
     {
         // Arrange
         var temperatureConverter = new TemperatureConverter();
@@ -36,28 +37,29 @@ public class TemperatureConverterTests
         double result = temperatureConverter.CelsiusToFahrenheit(celsius);
 
         // Assert
-        Assert.Equal(expectedFahrenheit, result);
+        Assert.AreEqual(expectedFahrenheit, result, 1e-6);
     }
 
-    [Theory]
-    [InlineData(32, 0)]
-    [InlineData(212, 100)]
-    [InlineData(-40, -40)]
-    public void FahrenheitToCelsius_ShouldReturnCorrectTemperature(double fahrenheit, double expectedCelsius)
+    [TestMethod]
+    [DataRow(32, 0)]
+    [DataRow(212, 100)]
+    [DataRow(-40, -40)]
+    public void FahrenheitToCelsius_ShouldReturnCorrectTemperature_WhenGivenFahrenheit(double fahrenheit, double expectedCelsius)
     {
         // Arrange
         var temperatureConverter = new TemperatureConverter();
 
         // Act
-        double result = temperatureConverter.FahrenheitToCelsius(fahrenheit);
-
-        // Assert
-        Assert.Equal(expectedCelsius, result);
+        double result = temperature
+    // Assert
+    Assert.AreEqual(expectedCelsius, result, 1e-6);
+    }    
+}
 ```
 By looking at these unit tests, a developer can quickly understand how the `TemperatureConverter` class works. The test cases provide clear examples of how to use the `CelsiusToFahrenheit` and `FahrenheitToCelsius` methods, including the expected input and output values.
 
-For instance, in the `CelsiusToFahrenheit_ShouldReturnCorrectTemperature` test, we see that the method takes a `double` value representing the temperature in Celsius and returns the equivalent temperature in Fahrenheit. The test case demonstrates this with various input values, such as 0, 100, and -40, and their corresponding expected Fahrenheit values.
+For instance, in the `CelsiusToFahrenheit_ShouldReturnCorrectTemperature_WhenGivenCelsius` test, we see that the method takes a `double` value representing the temperature in Celsius and returns the equivalent temperature in Fahrenheit. The test case demonstrates this with various input values, such as 0, 100, and -40, and their corresponding expected Fahrenheit values.
 
-Similarly, the `FahrenheitToCelsius_ShouldReturnCorrectTemperature` test illustrates how to use the `FahrenheitToCelsius` method and what results to expect when providing different input values.
+Similarly, the `FahrenheitToCelsius_ShouldReturnCorrectTemperature_WhenGivenFahrenheit` test illustrates how to use the `FahrenheitToCelsius` method and what results to expect when providing different input values.
 
 In this way, well-structured unit tests can act as a form of documentation that shows how the code is meant to be used and its expected behavior. This can be particularly helpful for developers who are new to a project or when a developer needs to understand how a particular piece of code works without delving deep into its implementation.

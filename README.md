@@ -10,22 +10,22 @@
 
 ## Protection against regression
 
-- Provides confidence that your new code doesn't break existing functionality [Example](examples\regression_example.md)
+- Provides confidence that your new code doesn't break existing functionality [Example](examples/regression_example.md)
 
 ## Improved Bug handling
-- Unit testing helps identify bugs and issues in the code at an early stage, making it easier to fix them. [Example](examples\bug_identification.md)
+- Unit testing helps identify bugs and issues in the code at an early stage, making it easier to fix them. [Example](examples/bug_identification.md)
 - When a test fails, it is much easier to locate the problem since the tests are focused on specific units of code.
 
 ## Executable documentation
 
-- Tests provide functionality documentation [Example](examples\documentation_example.md)
-- Allow to easily run certain scenarios and check what happens if we pass certain input
+- Tests provide functionality documentation [Example](examples/documentation_example.md)
+- Allows to easily run certain scenarios and check what happens if we pass certain input
 - Well named test explain what can be done with the code and ensure it actually works
 
 ## Less coupled code
 
 - When code is tightly coupled, it can be difficult to unit test. Without creating unit tests for the code that you're
-  writing, coupling might be less apparent. [Example](examples\tightly_coupled.md)
+  writing, coupling might be less apparent. [Example](examples/tightly_coupled.md)
 - The principle of developers eating their own dog food. Be the customer of your own code.
 
 ## Characteristics of a good unit test
@@ -65,6 +65,9 @@
 - Private methods are an implementation detail and never exist in isolation.
 - At some point, there's going to be a public facing method that calls the private method as part of its implementation.
 - What you should care about is the end result of the public method that calls into the private one.
+
+## Testing internal methods in case it is hard to test the public method [Example](examples/testing_internal.md)
+- In some cases we have tightly coupled legacy code in public method which makes it hard to unit test it directly. In these cases we might want to unit test `internal` methods separately. [Example](examples/testing_internal.md)
 
 ## Avoid using static calls/references in the code
 - For example, if we need to use `DateTime.Now`, instead of directly calling it in the code, create an instance of IDateTimeProvider.
