@@ -1,5 +1,5 @@
 # Testing Internals
-To unit test internal methods in C#, you can use the InternalsVisibleTo attribute in your project's AssemblyInfo.cs file (or create one if it doesn't exist). This attribute allows you to expose internal members of an assembly to another assembly, which makes it possible to test internal methods.
+To unit test internal methods in C#, you can use the InternalsVisibleTo attribute. This attribute allows you to expose internal members of an assembly to another assembly, which makes it possible to test internal methods.
 
 Here's a step-by-step guide on how to do this:
 
